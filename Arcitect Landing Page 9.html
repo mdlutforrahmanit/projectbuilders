@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium construction services with precision engineering and innovative building solutions">
+    <title>Vertex Builders | Constructing the Future</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #e5e5e5;
+            --accent: #f59e0b;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary);
+            color: var(--secondary);
+        }
+        .hero-overlay {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .before-after {
+            position: relative;
+            overflow: hidden;
+        }
+        .before-after .before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background: var(--accent);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 31px;
+            }
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black bg-opacity-90 z-50 shadow-xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-white">
+                        <span class="text-orange-500">VERTEX</span> BUILDERS
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#home" class="nav-link text-gray-200 hover:text-orange-500 transition">Home</a>
+                    <a href="#about" class="nav-link text-gray-200 hover:text-orange-500 transition">About</a>
+                    <a href="#services" class="nav-link text-gray-200 hover:text-orange-500 transition">Services</a>
+                    <a href="#projects" class="nav-link text-gray-200 hover:text-orange-500 transition">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-200 hover:text-orange-500 transition">Contact</a>
+                    <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md font-medium transition">Get Quote</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button outline-none">
+                        <svg class="w-6 h-6 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-black py-4 px-6">
+            <a href="#home" class="block py-2 text-gray-200 hover:text-orange-500">Home</a>
+            <a href="#about" class="block py-2 text-gray-200 hover:text-orange-500">About</a>
+            <a href="#services" class="block py-2 text-gray-200 hover:text-orange-500">Services</a>
+            <a href="#projects" class="block py-2 text-gray-200 hover:text-orange-500">Projects</a>
+            <a href="#contact" class="block py-2 text-gray-200 hover:text-orange-500">Contact</a>
+            <a href="#contact" class="block mt-4 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md font-medium text-center w-32">Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
+                 alt="Modern construction" 
+                 class="w-full h-full object-cover opacity-70"
+                 >
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                We Build the Future <span class="text-orange-500">with Precision</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Innovative construction solutions with 25+ years of excellence in commercial and residential building.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-md font-bold text-lg transition transform hover:scale-105">
+                    Get a Free Quote
+                </a>
+                <a href="#projects" class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-8 py-4 rounded-md font-bold text-lg transition transform hover:scale-105">
+                    View Our Projects
+                </a>
+            </div>
+        </div>
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </a>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Vertex Builders</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="About our company" 
+                         class="rounded-lg shadow-xl w-full h-auto"
+                         >
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-white mb-6">Building Excellence Since 1995</h3>
+                    <p class="text-gray-300 mb-6">
+                        Vertex Builders was founded with a vision to transform the construction industry through innovative techniques, sustainable practices, and uncompromising quality standards.
+                    </p>
+                    <p class="text-gray-300 mb-8">
+                        With over 250 completed projects and 150+ skilled professionals, we've established ourselves as a leader in commercial and high-end residential construction across the region.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="text-orange-500 mr-4 mt-1">
+                                <i class="fas fa-medal text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2">Award Winning</h4>
+                                <p class="text-gray-300 text-sm">15+ industry awards for excellence</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-orange-500 mr-4 mt-1">
+                                <i class="fas fa-shield-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2">Fully Licensed</h4>
+                                <p class="text-gray-300 text-sm">All required certifications</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-orange-500 mr-4 mt-1">
+                                <i class="fas fa-leaf text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2">Eco-Friendly</h4>
+                                <p class="text-gray-300 text-sm">Sustainable building practices</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-orange-500 mr-4 mt-1">
+                                <i class="fas fa-users text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2">Client Focused</h4>
+                                <p class="text-gray-300 text-sm">98% client satisfaction rate</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium transition">
+                        Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section id="services" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Core Services</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Comprehensive construction solutions tailored to your specific needs</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-800 rounded-lg p-8 transition duration-300 hover:bg-gray-700 transform hover:-translate-y-2 shadow-lg">
+                    <div class="text-orange-500 mb-4">
+                        <i class="fas fa-building text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Commercial Construction</h3>
+                    <p class="text-gray-300">
+                        State-of-the-art office buildings, retail spaces, and mixed-use developments designed for modern business needs.
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-800 rounded-lg p-8 transition duration-300 hover:bg-gray-700 transform hover:-translate-y-2 shadow-lg">
+                    <div class="text-orange-500 mb-4">
+                        <i class="fas fa-home text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Residential Projects</h3>
+                    <p class="text-gray-300">
+                        Luxury homes and custom residential properties built with precision and attention to detail.
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-800 rounded-lg p-8 transition duration-300 hover:bg-gray-700 transform hover:-translate-y-2 shadow-lg">
+                    <div class="text-orange-500 mb-4">
+                        <i class="fas fa-tools text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Renovation & Remodeling</h3>
+                    <p class="text-gray-300">
+                        Transform existing spaces with our expert renovation services that preserve structural integrity while modernizing.
+                    </p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-800 rounded-lg p-8 transition duration-300 hover:bg-gray-700 transform hover:-translate-y-2 shadow-lg">
+                    <div class="text-orange-500 mb-4">
+                        <i class="fas fa-road text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Infrastructure Development</h3>
+                    <p class="text-gray-300">
+                        Roads, bridges, and public works projects built to last with the highest engineering standards.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Projects -->
+    <section id="projects" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Recent Projects</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Explore our portfolio of successfully completed construction projects</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="flex justify-center mb-10">
+                <button class="project-filter px-6 py-2 mx-2 rounded-full bg-orange-500 text-white font-medium" data-filter="all">All Projects</button>
+                <button class="project-filter px-6 py-2 mx-2 rounded-full bg-gray-800 hover:bg-gray-700 text-white font-medium" data-filter="commercial">Commercial</button>
+                <button class="project-filter px-6 py-2 mx-2 rounded-full bg-gray-800 hover:bg-gray-700 text-white font-medium" data-filter="residential">Residential</button>
+                <button class="project-filter px-6 py-2 mx-2 rounded-full bg-gray-800 hover:bg-gray-700 text-white font-medium" data-filter="infrastructure">Infrastructure</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 project-container">
+                <!-- Project 1 -->
+                <div class="project-item bg-gray-900 rounded-lg overflow-hidden shadow-xl transition duration-300 hover:shadow-2xl" data-category="commercial">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="Commercial Office Tower" 
+                             class="w-full h-full object-cover transition duration-500 hover:scale-110"
+                             >
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6 opacity-0 hover:opacity-100 transition duration-300">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Downtown Office Tower</h3>
+                                <p class="text-gray-300">45-story Class A office building with LEED Platinum certification</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-orange-500 text-white text-xs px-3 py-1 rounded-full mb-3">Commercial</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Financial District High-Rise</h3>
+                        <p class="text-gray-300 mb-4">Completed in 2022, this landmark tower features innovative earthquake-resistant design.</p>
+                        <a href="#" class="text-orange-500 font-medium hover:text-orange-400 transition">View Project Details →</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-item bg-gray-900 rounded-lg overflow-hidden shadow-xl transition duration-300 hover:shadow-2xl" data-category="residential">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="Luxury Residential Complex" 
+                             class="w-full h-full object-cover transition duration-500 hover:scale-110"
+                             >
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6 opacity-0 hover:opacity-100 transition duration-300">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Hillside Villas</h3>
+                                <p class="text-gray-300">24 luxury residences with panoramic city views</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-orange-500 text-white text-xs px-3 py-1 rounded-full mb-3">Residential</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Hillside Luxury Residences</h3>
+                        <p class="text-gray-300 mb-4">Custom-designed homes with smart technology integration and sustainable materials.</p>
+                        <a href="#" class="text-orange-500 font-medium hover:text-orange-400 transition">View Project Details →</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-item bg-gray-900 rounded-lg overflow-hidden shadow-xl transition duration-300 hover:shadow-2xl" data-category="infrastructure">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="Highway Infrastructure" 
+                             class="w-full h-full object-cover transition duration-500 hover:scale-110"
+                             >
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6 opacity-0 hover:opacity-100 transition duration-300">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Northern Expressway</h3>
+                                <p class="text-gray-300">22km highway with advanced traffic management systems</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-orange-500 text-white text-xs px-3 py-1 rounded-full mb-3">Infrastructure</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Northern Corridor Highway</h3>
+                        <p class="text-gray-300 mb-4">Major infrastructure project completed 6 months ahead of schedule.</p>
+                        <a href="#" class="text-orange-500 font-medium hover:text-orange-400 transition">View Project Details →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-md font-bold text-lg transition transform hover:scale-105">
+                    View Full Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Vertex Builders</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Our commitment to excellence sets us apart in the construction industry</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 p-8 rounded-lg text-center hover:bg-gray-700 transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Quality Assurance</h3>
+                    <p class="text-gray-300">
+                        Rigorous quality control processes at every stage of construction to ensure lasting results.
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg text-center hover:bg-gray-700 transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Safety First</h3>
+                    <p class="text-gray-300">
+                        Industry-leading safety protocols with zero accidents in the last 5 years.
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg text-center hover:bg-gray-700 transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">On-Time Delivery</h3>
+                    <p class="text-gray-300">
+                        98% of projects completed on or before scheduled deadlines.
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg text-center hover:bg-gray-700 transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Cost Efficiency</h3>
+                    <p class="text-gray-300">
+                        Value engineering to maximize your budget without compromising quality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Story / Case Study -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <div class="before-after relative h-96 w-full rounded-lg overflow-hidden shadow-xl">
+                        <div class="before absolute top-0 left-0 w-full h-full">
+                            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Before renovation" 
+                                 class="w-full h-full object-cover"
+                                 >
+                        </div>
+                        <div class="after w-full h-full">
+                            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="After renovation" 
+                                 class="w-full h-full object-cover"
+                                 >
+                        </div>
+                        <input type="range" min="1" max="100" value="50" class="slider absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 cursor-pointer">
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-white mb-6">Downtown Office Transformation</h2>
+                    <p class="text-gray-300 mb-6">
+                        "Vertex Builders completely transformed our outdated 1980s office building into a modern, energy-efficient workspace that our employees love. The project was completed on time and under budget."
+                    </p>
+                    <div class="flex items-center mb-8">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                             alt="Client photo" 
+                             class="w-16 h-16 rounded-full mr-4 object-cover"
+                             >
+                        <div>
+                            <h4 class="text-white font-bold">Michael Johnson</h4>
+                            <p class="text-gray-400">CEO, TechForward Inc.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <p class="text-gray-400 text-sm">Project Duration</p>
+                            <p class="text-white font-bold">8 Months</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <p class="text-gray-400 text-sm">Cost Savings</p>
+                            <p class="text-white font-bold">12% Under Budget</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <p class="text-gray-400 text-sm">Energy Efficiency</p>
+                            <p class="text-white font-bold">35% Reduction</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <p class="text-gray-400 text-sm">LEED Certification</p>
+                            <p class="text-white font-bold">Gold Standard</p>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium transition">
+                        Read Full Case Study
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Construction Process</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">A streamlined approach that ensures quality at every stage</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="relative timeline">
+                <!-- Step 1 -->
+                <div class="mb-8 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-10 md:text-right mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold text-white mb-2">Initial Consultation</h3>
+                        <p class="text-gray-300">
+                            We listen to your vision, requirements, and budget to develop a comprehensive project plan.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 md:pl-10 flex justify-center md:justify-start">
+                        <div class="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl font-bold">
+                            1
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="mb-8 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pl-10 order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-white mb-2">Design & Planning</h3>
+                        <p class="text-gray-300">
+                            Our architects and engineers create detailed blueprints and 3D models for your approval.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 md:pr-10 flex justify-center md:justify-end order-1 md:order-2 mb-4 md:mb-0">
+                        <div class="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl font-bold">
+                            2
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="mb-8 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-10 md:text-right mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold text-white mb-2">Permitting & Approvals</h3>
+                        <p class="text-gray-300">
+                            We handle all necessary permits and regulatory approvals to ensure compliance.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 md:pl-10 flex justify-center md:justify-start">
+                        <div class="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl font-bold">
+                            3
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="mb-8 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pl-10 order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-white mb-2">Construction Phase</h3>
+                        <p class="text-gray-300">
+                            Our skilled team executes the project with regular progress updates and quality checks.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 md:pr-10 flex justify-center md:justify-end order-1 md:order-2 mb-4 md:mb-0">
+                        <div class="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl font-bold">
+                            4
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-10 md:text-right mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold text-white mb-2">Final Inspection & Handover</h3>
+                        <p class="text-gray-300">
+                            Comprehensive quality assurance before delivering your completed project.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 md:pl-10 flex justify-center md:justify-start">
+                        <div class="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl font-bold">
+                            5
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Showcase -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Meet Our Leadership Team</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Experienced professionals guiding your project to success</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="John Carter" 
+                             class="w-full h-full object-cover"
+                             >
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6 opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-orange-500 transition">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-orange-500 transition">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">John Carter</h3>
+                        <p class="text-orange-500 mb-3">CEO & Founder</p>
+                        <p class="text-gray-300 text-sm">
+                            25+ years in commercial construction with expertise in large-scale developments.
+                        </p>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="Sarah Johnson" 
+                             class="w-full h-full object-cover"
+                             >
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6 opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-orange-500 transition">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-orange-500 transition">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Sarah Johnson</h3>
+                        <p class="text-orange-500 mb-3">Chief Operations Officer</p>
+                        <p class="text-gray-300 text-sm">
+                            Specializes in project management and lean construction methodologies.
+                        </p>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="Michael Chen" 
+                             class="w-full h-full object-cover"
+                             >
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6 opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-orange-500 transition">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-orange-500 transition">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Michael Chen</h3>
+                        <p class="text-orange-500 mb-3">Chief Engineer</p>
+                        <p class="text-gray-300 text-sm">
+                            Structural engineering expert with focus on seismic-resistant designs.
+                        </p>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="relative h-64">
+                        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="Emma Rodriguez" 
+                             class="w-full h-full object-cover"
+                             >
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6 opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-orange-500 transition">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-orange-500 transition">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Emma Rodriguez</h3>
+                        <p class="text-orange-500 mb-3">Director of Sustainability</p>
+                        <p class="text-gray-300 text-sm">
+                            LEED AP with expertise in green building and energy-efficient design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Construction Stats -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-8">
+                    <div class="text-orange-500 text-5xl font-bold mb-2 counter" data-target="250">0</div>
+                    <h3 class="text-xl text-white font-bold mb-2">Projects Completed</h3>
+                    <p class="text-gray-300">Across commercial and residential sectors</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-orange-500 text-5xl font-bold mb-2 counter" data-target="150">0</div>
+                    <h3 class="text-xl text-white font-bold mb-2">Skilled Professionals</h3>
+                    <p class="text-gray-300">Dedicated construction experts</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-orange-500 text-5xl font-bold mb-2 counter" data-target="98">0</div>
+                    <h3 class="text-xl text-white font-bold mb-2">Client Satisfaction</h3>
+                    <p class="text-gray-300">Percentage of satisfied clients</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-orange-500 text-5xl font-bold mb-2 counter" data-target="15">0</div>
+                    <h3 class="text-xl text-white font-bold mb-2">Industry Awards</h3>
+                    <p class="text-gray-300">Recognitions for excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Partners -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Certifications & Partners</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Trusted by industry leaders and recognized for excellence</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div class="flex items-center justify-center p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition">
+                    <img src="https://placehold.jp/150x80.png" alt="LEED Certified" class="h-12 object-contain opacity-80 hover:opacity-100 transition">
+                </div>
+                <div class="flex items-center justify-center p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition">
+                    <img src="https://placehold.jp/150x80.png" alt="OSHA Certified" class="h-12 object-contain opacity-80 hover:opacity-100 transition">
+                </div>
+                <div class="flex items-center justify-center p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition">
+                    <img src="https://placehold.jp/150x80.png" alt="ISO Certified" class="h-12 object-contain opacity-80 hover:opacity-100 transition">
+                </div>
+                <div class="flex items-center justify-center p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition">
+                    <img src="https://placehold.jp/150x80.png" alt="USGBC Member" class="h-12 object-contain opacity-80 hover:opacity-100 transition">
+                </div>
+                <div class="flex items-center justify-center p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition">
+                    <img src="https://placehold.jp/150x80.png" alt="AGC Member" class="h-12 object-contain opacity-80 hover:opacity-100 transition">
+                </div>
+                <div class="flex items-center justify-center p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition">
+                    <img src="https://placehold.jp/150x80.png" alt="ABC Member" class="h-12 object-contain opacity-80 hover:opacity-100 transition">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Answers to common questions about our construction services</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-4 border-b border-gray-700">
+                    <button class="faq-question flex justify-between items-center w-full py-4 text-left text-white font-medium">
+                        <span>What types of construction projects do you specialize in?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content accordion-content">
+                        <div class="pb-6 text-gray-300">
+                            We specialize in a wide range of construction projects including commercial buildings (offices, retail spaces, hotels), residential properties (single-family homes, multi-unit developments), and infrastructure projects. Our team has particular expertise in high-rise construction, sustainable building practices, and historic renovations.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="mb-4 border-b border-gray-700">
+                    <button class="faq-question flex justify-between items-center w-full py-4 text-left text-white font-medium">
+                        <span>How do you ensure project timelines are met?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content accordion-content">
+                        <div class="pb-6 text-gray-300">
+                            We employ rigorous project management methodologies including Critical Path Method scheduling, regular progress meetings, and contingency planning. Our 98% on-time completion rate is achieved through careful resource allocation, experienced subcontractor networks, and proactive risk management.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="mb-4 border-b border-gray-700">
+                    <button class="faq-question flex justify-between items-center w-full py-4 text-left text-white font-medium">
+                        <span>What safety measures do you implement on site?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content accordion-content">
+                        <div class="pb-6 text-gray-300">
+                            Safety is our top priority. We implement comprehensive safety programs including daily toolbox talks, OSHA-compliant protocols, regular site inspections, and mandatory safety training for all personnel. Our safety record includes zero lost-time accidents in the past five years.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="mb-4 border-b border-gray-700">
+                    <button class="faq-question flex justify-between items-center w-full py-4 text-left text-white font-medium">
+                        <span>How do you handle project budgeting and cost control?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content accordion-content">
+                        <div class="pb-6 text-gray-300">
+                            We provide detailed, transparent cost estimates upfront and maintain strict budget controls through value engineering, bulk material purchasing agreements, and real-time cost tracking software. Clients receive monthly budget reports, and we've delivered 92% of projects at or under estimated costs.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="mb-4 border-b border-gray-700">
+                    <button class="faq-question flex justify-between items-center w-full py-4 text-left text-white font-medium">
+                        <span>What sustainable building practices do you offer?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content accordion-content">
+                        <div class="pb-6 text-gray-300">
+                            Our sustainable solutions include energy-efficient HVAC systems, solar panel integration, rainwater harvesting, recycled building materials, green roofs, and passive design strategies. We're LEED Accredited Professionals and can guide projects through certification processes for LEED, WELL, or other green building standards.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Hear from businesses and homeowners who've worked with us</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-900 p-8 rounded-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">
+                        "Vertex Builders transformed our outdated office into a modern, functional workspace that has boosted employee morale and productivity. Their attention to detail was exceptional."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                             alt="Client" 
+                             class="w-12 h-12 rounded-full mr-4 object-cover"
+                             >
+                        <div>
+                            <h4 class="text-white font-bold">David Wilson</h4>
+                            <p class="text-gray-400 text-sm">CEO, TechSolutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-gray-900 p-8 rounded-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">
+                        "Our custom home build was completed 3 weeks ahead of schedule with no compromises on quality. The communication throughout the process was outstanding."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                             alt="Client" 
+                             class="w-12 h-12 rounded-full mr-4 object-cover"
+                             >
+                        <div>
+                            <h4 class="text-white font-bold">Sarah & James Peterson</h4>
+                            <p class="text-gray-400 text-sm">Homeowners</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-gray-900 p-8 rounded-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                        <i class="fas fa-star text-orange-500"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">
+                        "The retail complex Vertex built for us has become the crown jewel of our portfolio. Their ability to deliver high-end finishes within budget was impressive."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                             alt="Client" 
+                             class="w-12 h-12 rounded-full mr-4 object-cover"
+                             >
+                        <div>
+                            <h4 class="text-white font-bold">Robert Chen</h4>
+                            <p class="text-gray-400 text-sm">Director, Urban Properties</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900 relative">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
+                 alt="CTA Background" 
+                 class="w-full h-full object-cover opacity-20"
+                 >
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Start Your Project?</h2>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                    Contact us today for a free consultation and estimate. Let's build something remarkable together.
+                </p>
+                <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-md font-bold text-lg transition transform hover:scale-105">
+                    Get Your Free Quote Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Contact Us</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Get in touch with our team for inquiries or project discussions</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-white" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-white" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-white" placeholder="+1 (555) 123-4567">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                            <select id="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-white">
+                                <option value="">Select a subject</option>
+                                <option value="residential">Residential Construction</option>
+                                <option value="commercial">Commercial Construction</option>
+                                <option value="renovation">Renovation Services</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-white" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-md font-bold text-lg transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="lg:w-1/2 lg:pl-10">
+                    <div class="bg-gray-900 rounded-lg p-8 h-full">
+                        <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-orange-500 mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Our Headquarters</h4>
+                                    <p class="text-gray-300">123 Construction Avenue, Building 5<br>San Francisco, CA 94107</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-orange-500 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Phone Numbers</h4>
+                                    <p class="text-gray-300 mb-1">Main: (415) 555-0199</p>
+                                    <p class="text-gray-300">Sales: (415) 555-0188</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-orange-500 mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Email Addresses</h4>
+                                    <p class="text-gray-300 mb-1">General: info@vertexbuilders.com</p>
+                                    <p class="text-gray-300">Support: support@vertexbuilders.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-orange-500 mr-4 mt-1">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Business Hours</h4>
+                                    <p class="text-gray-300 mb-1">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-300">Saturday: 9:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-white font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-orange-500 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-orange-500 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-orange-500 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-orange-500 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-orange-500 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="bg-gray-800 rounded-xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>
+                        <p class="text-gray-300">
+                            Get construction insights, project updates, and exclusive offers delivered to your inbox.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 w-full">
+                        <form class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-white">
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium whitespace-nowrap transition">
+                                Subscribe Now
+                            </button>
+                        </form>
+                        <p class="text-gray-400 text-sm mt-3">
+                            By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white mb-6 inline-block">
+                        <span class="text-orange-500">VERTEX</span> BUILDERS
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        Building the future with precision, quality, and innovation since 1995.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-orange-500 transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-orange-500 transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-orange-500 transition">Services</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-orange-500 transition">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-orange-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Commercial Construction</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Residential Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Renovation & Remodeling</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Infrastructure</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Sustainable Building</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-orange-500 mr-3 mt-1"></i>
+                            <span>123 Construction Ave, San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-orange-500 mr-3 mt-1"></i>
+                            <span>(415) 555-0199</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-orange-500 mr-3 mt-1"></i>
+                            <span>info@vertexbuilders.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-orange-500 mr-3 mt-1"></i>
+                            <span>Mon-Fri: 8AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2023 Vertex Builders. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-orange-500 transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-orange-500 transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-orange-500 transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="fixed bottom-8 right-8 bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Sticky navigation with scroll highlight
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const backToTop = document.querySelector('.back-to-top');
+            
+            // Sticky nav
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-lg');
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                nav.classList.remove('shadow-lg');
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+            
+            // Section highlighting
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                if (window.scrollY >= sectionTop - 200 && window.scrollY < sectionTop + sectionHeight - 200) {
+                    const id = section.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-orange-500');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('text-orange-500');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Project filtering
+        const filterButtons = document.querySelectorAll('.project-filter');
+        const projectItems = document.querySelectorAll('.project-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-orange-500');
+                    btn.classList.add('bg-gray-800', 'hover:bg-gray-700');
+                });
+                button.classList.add('bg-orange-500');
+                button.classList.remove('bg-gray-800', 'hover:bg-gray-700');
+                
+                // Filter projects
+                const filterValue = button.getAttribute('data-filter');
+                
+                projectItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Before-After Image Slider
+        const slider = document.querySelector('.before-after input');
+        if (slider) {
+            slider.addEventListener('input', (e) => {
+                const value = e.target.value;
+                const before = document.querySelector('.before-after .before');
+                before.style.width = `${value}%`;
+            });
+        }
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const content = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle content
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+                
+                // Close other open items
+                faqQuestions.forEach(item => {
+                    if (item !== question) {
+                        const otherContent = item.nextElementSibling;
+                        const otherIcon = item.querySelector('i');
+                        otherContent.style.maxHeight = null;
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+
+        // Animated Counters
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Start counters when section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const statsSection = document.querySelector('.counter').parentElement.parentElement.parentElement;
+        observer.observe(statsSection);
+
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            // Native lazy loading is supported
+            const lazyImages = document.querySelectorAll('img[]');
+            lazyImages.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Fallback for browsers without native lazy loading
+            const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[]').forEach(img => {
+                lazyLoadObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
